@@ -14,15 +14,6 @@ body {
 }
 /* /////////////////////////////////////////////////////////////////////////////Rasmlar asta sekn chiqad */
 /* Make sure the card elements are aligned correctly */
-.card {
-    position: relative;
-    display: inline-block;
-    width: calc(100% - 0px); /* Adjust based on the number of columns */
-    margin: 10px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth fade-in transition */
-    visibility: visible;
-}
 
 /* Apply fade-in animation when new images are added */
 .card.fade-in {
