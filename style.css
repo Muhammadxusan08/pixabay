@@ -69,7 +69,7 @@ body {
 }
 
 .search-bar input::placeholder {
-    color: rgba(255, 255, 255, 0.577);
+    color: rgba(255, 255, 255, 0.466);
 }
 
 .logo-title {
@@ -132,6 +132,29 @@ body {
         position: relative;
         align-items: center;
         justify-content: center;
+    }
+}
+@media(max-width:450px){
+    .logo-title {
+        width: 100px;
+        height: 25px;
+        object-fit: cover;
+        /* Adjust size as needed */
+    }
+    .search-bar input{
+        max-width: 100px;
+        padding: 3px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    .photographer span{
+        display: none;
+    }
+    .photographer i{
+        display: none;
     }
 }
 
@@ -285,7 +308,7 @@ body {
 }
 
 .photographer {
-    color: #fff;
+    color: #ffffff;
     display: flex;
     align-items: center;
 
@@ -318,6 +341,12 @@ i {
     padding: 3px 8px;
     color: white;
 
+}
+@media(max-width:450px){
+    .details button{
+        background-color: #5f666d00;
+        font-size: 1.3rem;
+    }
 }
 
 .details .download-btn:hover {
@@ -549,6 +578,32 @@ header .buttons i:last-child:hover {
         margin-right: auto;
         border-radius: 7px;
     }
+    
+}
+@media(max-width:500px){
+    .gallery .images {
+        gap: 12px;
+        max-width: 50%;
+        margin-top: 40px;
+        columns: 2 150px;
+        list-style: none;
+    }
+    .gallery .images .card {
+        display: flex;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 14px;
+        border-radius: 10px;
+    
+    }
+    .photographer span {
+        font-size: 0.70rem;
+    
+    }
+    .images .details{
+        padding: 15px 10px 15px 10px;
+    }
 }
 
 @media screen and (max-width: 688px) {
@@ -570,7 +625,7 @@ header .buttons i:last-child:hover {
 
     header .photographer span,
     .search p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
 
     }
 
