@@ -134,3 +134,34 @@ menuItems.forEach(item => {
 
 
 
+
+
+// API orqali rasmni olish
+fetch('https://api.example.com/your-image-endpoint')
+    .then(response => response.json())
+    .then(data => {
+        // APIdan olingan rasm URL sini img tagiga o'rnatish
+        const image = document.getElementById("zoomImage");
+        image.src = data.imageUrl; // APIdan olingan rasm URL sini 'imageUrl' deb faraz qilaylik
+    })
+    .catch(error => console.error('Error fetching image:', error));
+
+// Zoom effekti uchun kod
+const image = document.getElementById("zoomImage");
+
+image.addEventListener("click", function(event) {
+    const rect = image.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    const offsetY = event.clientY - rect.top;
+    
+    // Set the transform origin to the point clicked
+    image.style.transformOrigin = `${offsetX}px ${offsetY}px`;
+    
+    // Toggle zoom in/out effect
+    if (image.style.transform === "scale(2)") {
+        image.style.transform = "scale(1)";
+    } else {
+        image.style.transform = "scale(2)";
+    }
+});
+
