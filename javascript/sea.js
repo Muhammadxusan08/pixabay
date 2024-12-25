@@ -17,7 +17,7 @@ const searchImages = () => {
     currentPage = 1; // Yangi qidiruv uchun sahifani qayta tiklash
     searchTerm = query; // Qidiruv so'zini o'zgaruvchiga o'zlashtirish
     imageWrapper.innerHTML = ""; // Ekrandagi rasm kartochkalarini tozalash
-    getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=1&per_page=${perPage}`);
+    getImages(`https://api.pexels.com/v1/search?query=sea&page=${currentPage}&per_page=${perPage}`);
 };
 
 // Inputda Enter tugmasi bosilganda qidirish
@@ -98,17 +98,17 @@ const loadImages = () => {
     currentPage = 1;
     searchTerm = searchInput.value;
     imageWrapper.innerHTML = "";
-    getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=1&per_page=${perPage}`);
+    getImages(`https://api.pexels.com/v1/search?query=sea&page=${currentPage}&per_page=${perPage}`);
 }
 
 const loadMoreImages = () => {
     currentPage++;
-    let apiUrl = `https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`;
-    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}` : apiUrl;
+    let apiUrl = `https://api.pexels.com/v1/search?query=sea&page=${currentPage}&per_page=${perPage}`;
+    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=sea&page=${currentPage}&per_page=${perPage}` : apiUrl;
     getImages(apiUrl);
 }
 
-getImages(`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`);
+getImages(`https://api.pexels.com/v1/search?query=sea&page=${currentPage}&per_page=${perPage}`);
 
 searchBtn.addEventListener("click", loadImages); // Search button click
 searchInput.addEventListener("keyup", (e) => {
@@ -164,4 +164,26 @@ image.addEventListener("click", function(event) {
         image.style.transform = "scale(2)";
     }
 });
+
+
+
+// ACTIVE
+// const textItems = document.querySelectorAll('.text-item');
+
+// textItems.forEach(item => {
+//     item.addEventListener('click', () => {
+//         // Remove active class from all items
+//         textItems.forEach(i => i.classList.remove('activete'));
+//         // Add activete class to clicked item
+//         item.classList.add('activete');
+//     });
+// });
+// ACTIVE
+
+
+
+
+
+
+
 
