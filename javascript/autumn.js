@@ -17,7 +17,7 @@ const searchImages = () => {
     currentPage = 1; // Yangi qidiruv uchun sahifani qayta tiklash
     searchTerm = query; // Qidiruv so'zini o'zgaruvchiga o'zlashtirish
     imageWrapper.innerHTML = ""; // Ekrandagi rasm kartochkalarini tozalash
-    getImages(`https://api.pexels.com/v1/search?query=autumn&page=${currentPage}&per_page=${perPage}`);
+    getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}`);
 };
 
 // Inputda Enter tugmasi bosilganda qidirish
@@ -98,13 +98,13 @@ const loadImages = () => {
     currentPage = 1;
     searchTerm = searchInput.value;
     imageWrapper.innerHTML = "";
-    getImages(`https://api.pexels.com/v1/search?query=autumn&page=${currentPage}&per_page=${perPage}`);
+    getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}`);
 }
 
 const loadMoreImages = () => {
     currentPage++;
     let apiUrl = `https://api.pexels.com/v1/search?query=autumn&page=${currentPage}&per_page=${perPage}`;
-    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=autumn&page=${currentPage}&per_page=${perPage}` : apiUrl;
+    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}` : apiUrl;
     getImages(apiUrl);
 }
 

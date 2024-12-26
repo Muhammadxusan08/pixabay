@@ -35,7 +35,7 @@ body {
     position: fixed;
     align-items: center;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     color: #fff;
     background-color: hsla(0, 0%, 9%, 0.141);
     z-index: 1111;
@@ -57,9 +57,15 @@ body {
 }
 
 /* Logo styles */
+.sdsd{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
 .logo-title {
-    width: 150px;
-    height: 55px;
+
+    font-family: 'Arial', sans-serif;
+    color: white;
     object-fit: cover;
     /* Adjust size as needed */
 }
@@ -68,7 +74,7 @@ body {
     position: relative;
     display: inline-block;
     background-color: #ffffff;
-    padding: 3px 20px 3px 20px;
+    padding: 3px 15px 3px 15px;
     border-radius: 50px;
     border: 1.5px solid white;
     color: rgb(0, 0, 0);
@@ -85,7 +91,7 @@ body {
 
 /* Search bar styles */
 .search-bar input {
-    padding: 8px;
+    padding: 4px;
     font-size: 16px;
     width: 300px;
     /* Adjust width as needed */

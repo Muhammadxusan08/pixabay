@@ -17,7 +17,7 @@ const searchImages = () => {
     currentPage = 1; // Yangi qidiruv uchun sahifani qayta tiklash
     searchTerm = query; // Qidiruv so'zini o'zgaruvchiga o'zlashtirish
     imageWrapper.innerHTML = ""; // Ekrandagi rasm kartochkalarini tozalash
-    getImages(`https://api.pexels.com/v1/search?query=mountain&page=${currentPage}&per_page=${perPage}`);
+    getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}`);
 };
 
 // Inputda Enter tugmasi bosilganda qidirish
@@ -104,7 +104,7 @@ const loadImages = () => {
 const loadMoreImages = () => {
     currentPage++;
     let apiUrl = `https://api.pexels.com/v1/search?query=mountain&page=${currentPage}&per_page=${perPage}`;
-    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=mountain&page=${currentPage}&per_page=${perPage}` : apiUrl;
+    apiUrl = searchTerm ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}` : apiUrl;
     getImages(apiUrl);
 }
 
