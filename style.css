@@ -34,8 +34,8 @@ body {
     width: 100%;
     position: fixed;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #fff;
     background-color: hsla(0, 0%, 9%, 0.141);
     z-index: 1111;
@@ -55,15 +55,20 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
+.logo{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
 /* Logo styles */
-.sdsd{
-    font-size: 30px;
+.sdsd {
     color: #fff;
     text-decoration: none;
 }
-.logo-title {
 
+.logo-title {
+    width: 140px;
+    height: 40px;
     font-family: 'Arial', sans-serif;
     color: white;
     object-fit: cover;
@@ -120,8 +125,8 @@ body {
     }
 
     .logo-title {
-        width: 150px;
-        height: 55px;
+        width: 140px;
+    height: 40px;
         object-fit: cover;
         /* Adjust size as needed */
     }
@@ -150,8 +155,8 @@ body {
 
 @media(max-width:450px) {
     .logo-title {
-        width: 130px;
-        height: 50px;
+        width: 100px;
+        height: 27px;
         object-fit: cover;
         /* Adjust size as needed */
     }
