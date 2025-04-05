@@ -64,6 +64,9 @@ body {
 .sdsd {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-title {
@@ -72,6 +75,8 @@ body {
     font-family: 'Arial', sans-serif;
     color: white;
     object-fit: cover;
+    border-radius: 30px 30px 30px 30px;
+
     /* Adjust size as needed */
 }
 
